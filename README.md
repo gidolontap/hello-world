@@ -5,3 +5,5 @@ Practice repo for learning GitHub flow.
 ## Notes
 
 I created a branch and will merge it with a pull request.
+
+I created a branch locally and will merge it with a pull request.
