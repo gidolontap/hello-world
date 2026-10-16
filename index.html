@@ -1,15 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hello World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
-    h1 { color: #0969da; }
+    :root {
+      --bg: #f8f9fa;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: #111827;
+      color: white;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a { color: white; text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem; }
+    header a:hover { color: #93c5fd; }
+    .hero {
+      text-align: center;
+      padding: 5rem 1.5rem 4rem;
+      background: linear-gradient(180deg, #eff6ff 0%, #f8f9fa 100%);
+    }
+    .hero h1 { font-size: 2.75rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.25rem; color: var(--muted); max-width: 600px; margin: 0 auto 1.5rem; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .btn:hover { background: #1d4ed8; }
+    section { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1.25rem; }
+    .cards { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .card h3 { margin-bottom: 0.5rem; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      header { flex-direction: column; gap: 0.75rem; }
+    }
   </style>
 </head>
 <body>
-  <h1>Hello World</h1>
-  <p>This page is hosted for free with GitHub Pages.</p>
-  <p>I practiced cloning, branching, pull requests, and merging.</p>
+  <header>
+    <strong>Your Name</strong>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Your Name</h1>
+    <p>Designer & developer building clean, useful things on the web. Currently learning and practicing with GitHub.</p>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Short paragraph about yourself. What you do, what you’re learning, or what kind of work you enjoy. Keep it to 2–3 sentences so it stays easy to scan.</p>
+  </section>
+
+  <section id="work">
+    <h2>Selected work</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>Brief description of what this project does and why it matters.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Another short description. You can add more cards later.</p>
+      </div>
+      <div class="card">
+        <h3>Project Three</h3>
+        <p>Replace these with real projects, GitHub links, or practice work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p style="margin-top: 0.75rem;">GitHub: <a href="https://github.com/gidolontap">github.com/gidolontap</a></p>
+  </section>
+
+  <footer>
+    Built with HTML & CSS · Hosted on GitHub Pages
+  </footer>
 </body>
 </html>
